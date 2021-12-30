@@ -8,12 +8,20 @@ function App() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
+  const handleLogin = () => {
+    const newUser = {
+      email: email,
+      password: password,
+    };
+    console.log(newUser);
+  };
+
   return (
     <div className="container">
       <div className="container-login">
         <div className="wrap-login">
           <form className="login-form">
-            <span className="login-form-title"> Bem vindo </span>
+            <span className="login-form-title"> Welcome </span>
 
             <span className="login-form-title">
               <img src={image} alt="Jovem Programador" />
@@ -40,7 +48,9 @@ function App() {
             </div>
 
             <div className="container-login-form-btn">
-              <button className="login-form-btn">Login</button>
+              <button className="login-form-btn" onClick={handleLogin}>
+                Login
+              </button>
             </div>
 
             <div className="text-center">
